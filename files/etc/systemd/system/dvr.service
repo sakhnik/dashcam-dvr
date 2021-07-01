@@ -1,0 +1,14 @@
+[Unit]
+Description=Digital video recorder
+After=boot-complete.target
+RequiresMountsFor=/etc/
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dvr.sh
+User=nobody
+Group=nobody
+TimeoutStartSec=0
+
+[Install]
+WantedBy=default.target
